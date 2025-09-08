@@ -11,11 +11,7 @@ import {
 type AddExpenseModalProps = {
   opened: boolean;
   onClose: () => void;
-  onAdd: (
-    name: string, 
-    amount: number | string, 
-    category: string
-  ) => void;
+  onAdd: (name: string, amount: number | string, category: string) => void;
 };
 
 export default function AddExpenseModal({}: AddExpenseModalProps) {
@@ -29,7 +25,17 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   let val_number: number = Number("500.0");
   console.log(val_number + 100); // 600.0
 
-  return {
-    /* Type additional text here. */
-  };
+  return (
+    <div
+      className="modal fade"
+      id="addExpen" //id="modalregister": ตัวระบุของ modal (ใช้กับ data-bs-target หน้า HomePage)
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabIndex={-1}
+      aria-labelledby="modalregisterLabel"
+      aria-hidden="true"
+    >
+      
+    </div>
+  );
 }
